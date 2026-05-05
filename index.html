@@ -629,6 +629,16 @@
     .form-row { grid-template-columns: 1fr; }
     .reviews-header, .reviews-cta { padding-left: 24px; padding-right: 24px; }
   }
+
+  @media (max-width: 900px) {
+    .why-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .process-grid { grid-template-columns: 1fr 1fr !important; }
+    .process-line { display: none !important; }
+    .why-section { padding: 60px 24px !important; }
+  }
+  @media (max-width: 560px) {
+    .process-grid { grid-template-columns: 1fr !important; }
+  }
 </style>
 </head>
 <body>
@@ -867,10 +877,10 @@
 
 
 <!-- WHY CHOOSE US + PROCESS -->
-<section style="padding:100px 60px; background:var(--black); position:relative; overflow:hidden;">
+<section style="padding:100px 60px; background:var(--black); position:relative; overflow:hidden;" class="why-section">
   <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.05) 0%, transparent 60%);pointer-events:none;"></div>
   <div style="position:relative;z-index:2;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;margin-bottom:100px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;margin-bottom:100px;" class="why-grid">
       <div>
         <div class="section-label">Why Built Carpentry & Co</div>
         <div class="section-title" style="margin-bottom:28px;">Built on Trust,<br>Backed by Results</div>
@@ -906,8 +916,8 @@
     <div style="border-top:1px solid rgba(245,240,235,0.08);padding-top:80px;">
       <div class="section-label" style="text-align:center;margin-bottom:14px;">Our Process</div>
       <div style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--warm-white);text-align:center;margin-bottom:60px;">From First Call to Final Finish</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;position:relative;">
-        <div style="position:absolute;top:36px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,0.4),transparent);pointer-events:none;"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;position:relative;" class="process-grid">
+        <div style="position:absolute;top:36px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,0.4),transparent);pointer-events:none;" class="process-line"></div>
         <div style="background:var(--charcoal);padding:40px 28px;text-align:center;position:relative;">
           <div style="width:72px;height:72px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;background:var(--black);">
             <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold);">01</span>
